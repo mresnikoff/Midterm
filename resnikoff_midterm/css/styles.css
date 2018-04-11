@@ -1,0 +1,173 @@
+body { 
+	margin: 0; 
+	font-family: 'Open Sans', sans-serif;
+	color: red;
+	background-color: black
+}
+header, footer { 
+	background-color: red;
+}
+footer { padding: 10px 0; }
+
+a {
+	text-decoration: none;
+	color: rgba(165,108,33,1);
+	border-bottom: 1px dashed rgba(165,108,33,1);
+}
+header a, footer a { 
+	color: white; 
+	border-bottom-color: white;
+}
+a:hover {
+	color: black;
+	border-bottom: 1px solid rgb(244, 75, 66);
+}
+
+.container {
+	margin: 0 auto;
+	width: 95%;
+	max-width: 1200px;
+}
+
+
+.persistent {
+	position: fixed;
+	left: 0;
+	width: 100%;
+}
+header.persistent { top: 0; }
+footer.persistent { bottom: 0; }
+
+
+.lead { 
+	font-weight: bold; 
+	border-bottom: 1px solid #333333;
+	padding-bottom: 25px;
+}
+
+.right { 
+	float: right;
+	margin-left: 20px;
+}
+
+.photo-frame {
+	padding: 5px;
+	border: 1px solid #999999;
+}
+.photo-frame figcaption {
+	font-size: 9pt;
+	font-style: italic;
+	color: #666666;
+}
+
+.too-wide {
+	columns: 400px;
+	column-gap: 50px;
+	column-rule: 1px dotted #666666;
+}
+
+.too-wide2 {
+	margin: 0 auto;
+	text-align: center;
+	max-width: 600px;
+	margin-top: 35px;
+}
+
+
+.message {
+	font-family: 'Playfair', cursive;
+	text-align: center;
+	color: red;
+	text-shadow: 0 0 30px red;
+}
+.message h1 {
+	font-size: 72pt;
+	font-weight: normal;
+	margin: 0;
+}
+.message a {
+	text-decoration: none;
+	color: white;
+	border-bottom: 1px solid white;
+}
+.message a:hover {
+	color: white;
+}
+.message .subtitle {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24pt;
+}
+.stand-alone { 
+	display: block; 
+	font-size: 10pt;
+	margin-bottom: 5px;
+}
+
+
+.stand-alone + input { 
+	padding: 5px;
+	font-size: 9pt;
+}
+input[type="submit"] { 
+	padding: 5px;
+	font-size: 9pt;
+}
+
+header .container, footer .container, .fpattern { 
+	display: flex;
+	justify-content: space-between;
+}
+.message, .primary, .strong { flex: 1 0 35%; }
+.strong { flex-shrink: 1; }
+
+.fpattern > *:first-child { margin-right: 25px; }
+.fpattern h2 { flex: 0 0 175px; }
+
+.primary, .strong, .weak, .terminal { 
+	align-self: center;
+	color: white;
+	text-shadow: 0 0 10px red;
+}
+.strong, .terminal { text-align: right; }
+.terminal { font-size: 18pt; }
+
+
+
+
+.z { 
+	background-image: url(../images/volley.jpeg);
+	background-size: cover;
+	background-position: center;
+}
+.z header, .z footer { 
+	background-color: transparent;
+}
+
+
+.z .strong,
+.z .primary, 
+.z .weak, 
+.z .terminal {
+	margin: 35px;
+}
+.primary, .weak { margin-left: 0; }
+.strong, .terminal { margin-right: 0; }
+
+.primary img {
+	background: radial-gradient(ellipse closest-side, rgba(255,255,255,1), rgba(255,255,255,0));
+	padding: 10px;
+}
+.primary img:hover {
+	background: radial-gradient(ellipse closest-side, rgba(244,75,66,1), rgba(255,255,255,0));
+}
+.primary a { border-bottom: none; }
+
+
+/*	Positioning of the centered message
+	************************************** */
+.z main { 
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
